@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#EEE"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Nombre_Cancion"
+            android:gravity="center"
+            android:id="@+id/textViewCancion"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Nombre_Artista"
+            android:gravity="center"
+            android:id="@+id/textViewArtista"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@id/textViewCancion"
+            />
+
+        <RelativeLayout
+
+            android:id="@+id/RelativeLayoutBotones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewArtista">
+
+            <ImageButton
+                android:id="@+id/imageButtonshare"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:src="@drawable/ic_share_black_24dp" />
+            <ImageButton
+                android:id="@+id/imageButtonstar"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star_border_black_24dp"
+                android:layout_toRightOf="@id/imageButtonshare"
+                android:layout_marginLeft="110dp"
+                />
+        </RelativeLayout>
+        <SeekBar
+            android:id="@+id/seekBarMusic"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RelativeLayoutBotones"
+            android:layout_centerInParent="true"
+
+            />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/seekBarMusic"
+            android:gravity="center">
+            <Button
+                android:id="@+id/buttonPrevious"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_skip_previous_black_24dp"
+
+                />
+            <Button
+                android:id="@+id/buttonPlaypause"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="-"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/ic_launcher"
+                />
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_skip_next_black_24dp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="285dp"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/ImageViewPortada"
+        />
+
+</RelativeLayout>
